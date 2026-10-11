@@ -7,57 +7,46 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Criar Usuário</title>
+    <title>Criar Pedido</title>
 </head>
 
 <body>
 
-    <div class="container mt-4">
+    
 
-        <h1>Criar Usuário</h1>
+        <h1>Criar Pedido</h1>
 
-        <form>
+        <form id="form-group">
 
-            <div class="mb-3">
-                <label class="form-label">Nome</label>
+            <div class="form-group">
 
-                <input
-                    type="text"
-                    id="usuario_nome"
-                    class="form-control"
-                    required>
-            </div>
-
-
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-
-                <input
-                    type="email"
-                    id="usuario_email"
-                    class="form-control"
-                    required>
-            </div>
-
-
-            <div class="mb-3">
-                <label class="form-label">Idade</label>
+                <label class="form-label">ID do Usuário</label>
 
                 <input
                     type="number"
-                    id="usuario_idade"
+                    id="pedido_usuario"
                     class="form-control"
                     required>
-            </div>
+            
 
 
-            <div class="mb-3">
-                <label class="form-label">Altura</label>
+            
+                <label class="form-label">ID do Produto</label>
 
                 <input
                     type="number"
-                    step="0.01"
-                    id="usuario_altura"
+                    id="pedido_produto"
+                    class="form-control"
+                    required>
+           
+
+
+           
+                <label class="form-label">Quantidade</label>
+
+                <input
+                    type="number"
+                    id="pedido_quantidade"
                     class="form-control"
                     required>
             </div>
@@ -65,26 +54,19 @@
 
             <button
                 type="button"
-                class="btn btn-success"
-                onclick="criarUsuario()">
+                class="btn btn-primary"
+                onclick="criarPedidos()">
 
                 Cadastrar
 
             </button>
 
-            <a
-                href="usuarios.html"
-                class="btn btn-secondary">
-
-                Voltar
-
-            </a>
-
         </form>
 
-    </div>
+    
+        
 
-    <script src="criarUsuario.js"></script>
+    <script src="criarPedidos.js"></script>
 
 </body>
 

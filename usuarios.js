@@ -23,9 +23,9 @@ async function carregarUsuarios() {
             tr.innerHTML = `
                 <td>${user.id}</td>
                 <td>${user.nome}</td>
+                <td>${user.email}</td>
                 <td>${user.idade}</td>
                 <td>${user.altura}</td>
-                <td>${user.email}</td>
 
                 <td>
                    <button class="btn btn-danger" onclick="deletarUsuario(${user.id})">Apagar</button>
