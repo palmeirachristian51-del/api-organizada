@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,64 +7,64 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Editar Pedido</title>
+    <title>Criar Produtos</title>
 </head>
 
 <body>
 
     
 
-        <h1>Editar Pedido</h1>
+        <h1>Criar Produtos</h1>
 
-        <form id="form-pedido">
+        <form id="form-group">
 
             <div class="form-group">
 
-                <label class="form-label">ID do Usuário</label>
+                <label class="form-label">Nome</label>
+
+                <input
+                    type="text"
+                    id="produto_nome"
+                    class="form-control"
+                    required>
+            
+
+
+            
+                <label class="form-label">Preço</label>
 
                 <input
                     type="number"
-                    id="pedido_usuario"
+                    step="0.01"
+                    id="produto_preco"
                     class="form-control"
-                    min="1"
                     required>
            
 
-            
-                <label class="form-label">ID do Produto</label>
-
-                <input
-                    type="number"
-                    id="pedido_produto"
-                    class="form-control"
-                    min="1"
-                    required>
-            
 
             
                 <label class="form-label">Quantidade</label>
 
                 <input
                     type="number"
-                    id="pedido_quantidade"
+                    id="produto_quantidade"
                     class="form-control"
-                    min="1"
                     required>
             </div>
 
+
             <button
                 type="button"
-                class="btn btn-warning"
-                onclick="editarPedido()">
-                Salvar Alterações
-            </button>
+                class="btn btn-primary"
+                onclick="criarProdutos()">
 
+                Cadastrar
+
+            </button>
 
         </form>
 
-    </div>
-
-    <script src="editarPedidos.js"></script>
+    <script src="../js/criarProdutos.js"></script>
 
 </body>
 
