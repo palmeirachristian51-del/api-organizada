@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Editar Pedido</title>
+</head>
+
+<body>
+
+    
+
+        <h1>Editar Pedido</h1>
+
+        <form id="form-pedido">
+
+            <div class="form-group">
+
+                <label class="form-label">ID do Usuário</label>
+
+                <input
+                    type="number"
+                    id="pedido_usuario"
+                    class="form-control"
+                    min="1"
+                    required>
+           
+
+            
+                <label class="form-label">ID do Produto</label>
+
+                <input
+                    type="number"
+                    id="pedido_produto"
+                    class="form-control"
+                    min="1"
+                    required>
+            
+
+            
+                <label class="form-label">Quantidade</label>
+
+                <input
+                    type="number"
+                    id="pedido_quantidade"
+                    class="form-control"
+                    min="1"
+                    required>
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-warning"
+                onclick="editarPedido()">
+                Salvar Alterações
+            </button>
+
+
+        </form>
+
+    </div>
+
+    <script src="editarPedidos.js"></script>
+
+</body>
+
+</html>

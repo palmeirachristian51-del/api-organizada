@@ -87,9 +87,9 @@ async function deletarProduto(produtoID) {
 
 function editarProduto(produtoID) {
 
-    window.location.href = `editarProduto.html?id=${produtoID}`;
+    window.location.href = `editarProdutos.html?id=${produtoID}`;
 
 }
 
 
-carregarProdutos();
+carregarProdutos()

@@ -29,17 +29,19 @@ async function carregarPedidos() {
                 <td>${pedido.produto}</td>
                 <td>${pedido.Quantidade}</td>
                 <td>R$ ${pedido.total.toFixed(2)}</td>
-
+                
                 <td>
+        <button class="btn btn-danger"
+            onclick="deletarPedido(${pedido.id})">
+            Apagar
+        </button>
 
-                    <button 
-                        class="btn btn-warning"
-                        onclick="editarPedido(${pedido.id})">
-                        Editar
-                    </button>
-
-                </td>
-            `;
+        <a href="editarPedidos.html?id=${pedido.id}"
+            class="btn btn-warning">
+            Editar
+        </a>
+    </td>
+`;
 
             tbody.appendChild(tr);
 
@@ -60,5 +62,26 @@ async function editarPedido(pedidoID) {
 
 }
 
+async function deletarPedido(id) {
+    if (!confirm("Deseja realmente apagar este pedido?")) {
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API_URL}/pedidos/${id}`, {
+            method: "DELETE"
+        });
+
+        if (!response.ok) {
+            throw new Error("Erro ao apagar pedido");
+        }
+
+        listarPedidos();
+
+    } catch (error) {
+        alert("Erro ao apagar pedido.");
+        console.error(error);
+    }
+}
 
 carregarPedidos();
